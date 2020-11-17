@@ -46,3 +46,10 @@ def post_delete(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
+
+
+
+def post_like(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.like()
+    return redirect('post_list')
