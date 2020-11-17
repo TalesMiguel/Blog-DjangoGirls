@@ -49,7 +49,13 @@ def post_delete(request, pk):
 
 
 
-def post_like(request, pk):
+def post_thumbs_up(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.like()
     return redirect('post_list')
+
+
+def post_thumbs_down(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    post.like()
+    return redirect('post_list')    
