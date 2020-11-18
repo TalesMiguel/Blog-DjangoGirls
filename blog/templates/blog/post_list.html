@@ -8,6 +8,8 @@
             </div>
             <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
             <p>{{ post.text|linebreaksbr }}</p>
+            <a class="btn btn-default" href="{% url 'post_thumbs_up' pk=post.pk %}"><span class="glyphicon glyphicon-thumbs-up"></span></a>            
+            <a class="btn btn-default" href="{% url 'post_thumbs_down' pk=post.pk %}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
         </div>
     {% endfor %}
 {% endblock %}
