@@ -48,7 +48,6 @@ def post_delete(request, pk):
     return redirect('post_list')
 
 
-
 def post_thumbs_up(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.thumbs_up()
